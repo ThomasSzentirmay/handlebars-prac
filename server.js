@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 3333;
 
 
 // Middleware
-app.use(express.json()); // Allows the client/browser to send json in a request
+app.use(express.json()); // Allows the client/browser to send json in a request (for example if they submit their email and pass)
+app.use(express.urlencoded({extended: true})); // Allows users to submit standard encoded for data like the form we are using with hbs
 app.use(express.static('public')); // Allows the client/browser to access any folders or files in public - opens this folder at the root
 
 

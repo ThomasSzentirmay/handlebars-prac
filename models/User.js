@@ -7,6 +7,7 @@ User.init({
   email: {
     type: DataTypes.STRING,
     unique: true, // users can't reuse emails when signing up
+    allowNull: false,
     validate: {
       isEmail: true // makes sure it is an email
     }
