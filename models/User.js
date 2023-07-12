@@ -28,7 +28,7 @@ User.init({
       const hashPassword = await hash(user.password, 10);
 
       user.password = hashPassword;
-    }
+    },
   }
 });
 
