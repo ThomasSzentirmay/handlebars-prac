@@ -24,12 +24,10 @@ User.init({
   sequelize: db,
   modelName: 'user',
   hooks: {
-    beforeCreate(user) {
-      hash(user.password, 10, (err, hash) => {
-        if (err) return console.log(err);
+    async beforeCreate(user) {
+      const hashPassword = await hash(user.password, 10);
 
-        user.password = hash;
-      });
+      user.password = hashPassword;
     }
   }
 });
