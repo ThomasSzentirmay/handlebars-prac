@@ -17,7 +17,8 @@ app.use(express.static('public')); // Allows the client/browser to access any fo
 // Setup Handlebars Template Engine
 app.engine('handlebars', engine({
   // layout directory that allows you to avoid repeated html code
-  layoutsDir: './views/layouts'
+  layoutsDir: './views/layouts',
+  extname: 'hbs'
 }));
 app.set('view engine', 'handlebars');
 app.set('views', './views');
