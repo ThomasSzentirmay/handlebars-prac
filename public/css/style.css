@@ -32,6 +32,17 @@ nav a:hover, nav a.active {
   color: #fff;
 }
 
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 form {
   width: 400px;
   margin: 20px auto;

@@ -8,6 +8,7 @@ const db = require('./db/connection');
 // Import routes
 const api_routes = require('./controllers/api_routes');
 const view_routes = require('./controllers/view_routes');
+const user_routes = require('./controllers/user_routes');
 
 const app = express();
 const PORT = process.env.PORT || 3333;
@@ -33,7 +34,7 @@ app.set('views', './views');
 
 
 // Load Routes
-app.use('/', [api_routes, view_routes]);
+app.use('/', [api_routes, view_routes, user_routes]);
 
 
 
