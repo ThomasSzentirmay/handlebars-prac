@@ -40,7 +40,7 @@ app.set('views', './views');
 
 // Load Sessions
 app.use(session({
-  secret: process.enc.SECRET_KEY,
+  secret: process.env.SECRET_KEY,
   resave: false,
   saveUninitialized: true,
   cookie: { httpOnly: true }
