@@ -7,6 +7,13 @@ router.get('/', (req, res) => {
   });
 });
 
+// Show login page
+router.get('/login', (req, res) => {
+  res.render('login', {
+    isLogin: true
+  });
+})
+
 // Show register page
 router.get('/register', (req, res) => {
   res.render('register', {
@@ -16,6 +23,7 @@ router.get('/register', (req, res) => {
 
 // Show dashboard page
 router.get('/dashboard', (req, res) => {
+  console.log(req.session);
   res.render('dashboard');
 })
 

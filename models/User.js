@@ -32,4 +32,11 @@ User.init({
   }
 });
 
+// De-crypt user hash to compare to login pass
+User.prototype.validatePass = async function(formPassword) {
+  const isValid = await compare(formPassword, this.password)
+
+  return isValid;
+}
+
 module.exports = User;
