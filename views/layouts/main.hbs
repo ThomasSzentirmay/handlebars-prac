@@ -11,8 +11,17 @@
     <h3>Twitter Clone</h3>
     <nav>
       <a href="/" class="{{#if isHome}}active{{/if}}">Home</a>
-      <a href="/login" class="{{#if isLogin}}active{{/if}}">Login</a>
-      <a href="/register" class="{{#if isRegister}}active{{/if}}">Register</a>
+      {{#if email}}
+        <p>Welcome, {{email}}</p>
+        <a href="/logout">Log Out</a>
+        {{else}}
+        {{#if isLoggedIn}}
+          <a href="/dashboard">Dashboard</a>
+          {{else}}
+          <a href="/login" class="{{#if isLogin}}active{{/if}}">Login</a>
+          <a href="/register" class="{{#if isRegister}}active{{/if}}">Register</a>
+        {{/if}}
+      {{/if}}
     </nav>
   </header>
 

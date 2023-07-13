@@ -38,7 +38,8 @@ router.post('/register', async (req, res) => {
     try {
         const newUser = await User.create(req.body);
 
-        req.session.user_id = newUser.isSoftDeleted;
+        // Creates a session and sends a cookie to the client
+        req.session.user_id = newUser.id;
 
         res.redirect('/dashboard');
     } catch (err) {
