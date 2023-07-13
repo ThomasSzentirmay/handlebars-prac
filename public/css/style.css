@@ -58,3 +58,20 @@ form > * {
 form h1 {
   text-align: center;
 }
+
+form .show-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+form .show-password label {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+form .show-password input[type="checkbox"] {
+  margin-right: 15px;
+}
