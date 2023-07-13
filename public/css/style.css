@@ -82,3 +82,11 @@ form .show-password label {
 form .show-password input[type="checkbox"] {
   margin-right: 15px;
 }
+
+ul li {
+  margin-top: 10px 0;
+}
+
+ul li p {
+  margin: 4px;
+}

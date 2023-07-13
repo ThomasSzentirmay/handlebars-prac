@@ -13,6 +13,7 @@ const db = require('./db/connection');
 const api_routes = require('./controllers/api_routes');
 const view_routes = require('./controllers/view_routes');
 const user_routes = require('./controllers/user_routes');
+const thought_routes = require('./controllers/thought_routes');
 
 const app = express();
 const PORT = process.env.PORT || 3333;
@@ -49,7 +50,7 @@ app.use(session({
 
 
 // Load Routes
-app.use('/', [api_routes, view_routes, user_routes]);
+app.use('/', [api_routes, view_routes, user_routes, thought_routes]);
 
 
 

@@ -1,5 +1,14 @@
 <h1>Dashboard</h1>
 
-<div class="dash-p">
-    <p>{{email}}</p>
-</div>
+<form action="/thought" method="POST">
+    <input name="text" type="text" placeholder="Share your thought!">
+    <button>Submit</button>
+</form>
+
+<main class="thoughts">
+    {{#each thoughts}}
+    <div class="thought">
+        <p>{{text}}</p>
+    </div>
+    {{/each}}
+</main>

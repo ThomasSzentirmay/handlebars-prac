@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const { hash, compare } = require('bcrypt');
 const db = require('../db/connection');
-const Thought = require('../Thought');
+const Thought = require('./Thought');
 
 
 class User extends Model { }
